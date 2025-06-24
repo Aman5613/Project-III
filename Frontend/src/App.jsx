@@ -1,19 +1,10 @@
 import { useEffect } from "react";
 import instance from "./API/axiosconfig"
+import { asyncgetProducts } from "./Store/userAction";
+
 const App = () => {
-  const getProduct = async () => {
-    try {
-      const res = await instance.get("/Products")
-      console.log(res);
-      
-    } catch (error) {
-      console.log(error);
-      
-    }
-  }
   useEffect(() => {
-    getProduct()
-    
+    asyncgetProducts()
   }, [])
 
 
