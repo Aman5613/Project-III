@@ -1,37 +1,23 @@
-import axios from "axios";
-import { instance } from "./Utils/axios.config";
+import { useDispatch, useSelector } from "react-redux";
+import { asyncgetProducts, asyncgetUsers } from "./Store/Action";
 import { useEffect } from "react";
 
 
 
 const App = () => {
-  const getProduct = async () => {
-    try {
-      const response = await instance.get("/products")
-      console.log(response.data);
-      
-    } catch (error) {
-      console.log(error.message);
-      
-    }
-  }
+  const dispatch = useDispatch();
 
-  const getUsers = async () => {
-    try {
-      const res = await instance.get("/users");
-      console.log(res.data);
-    } catch (error) {
-      console.log(error.message);
-    }
-  }
+  const data = useSelector((state) => state)
 
-  useEffect( () => {
-    getProduct();
-    getUsers();
-  }, [])
+  useEffect(() => {
+    dispatch(asyncgetUsers())
+    dispatch(asyncgetProducts())
+  }, []);
+
+
   return (
     <div>
-      <h1>Hello from new world</h1>
+      <h1>Redux toolkit</h1>
     </div>
   )
 }
