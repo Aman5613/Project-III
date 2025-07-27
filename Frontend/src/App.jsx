@@ -1,13 +1,14 @@
 import { useDispatch, useSelector } from "react-redux";
 import { asyncgetProducts, asyncgetUsers } from "./Store/Action";
 import { useEffect } from "react";
-
+import Mainroutes from "./Routes/mainRoutes";
+import Nav from "./Nav/Nav";
 
 
 const App = () => {
   const dispatch = useDispatch();
 
-  const data = useSelector((state) => state)
+  // useSelector((state) => state)
 
   useEffect(() => {
     dispatch(asyncgetUsers())
@@ -16,8 +17,9 @@ const App = () => {
 
 
   return (
-    <div>
-      <h1>Redux toolkit</h1>
+    <div className="text-white w-screen h-screen px-[5%] bg-gray-800 ">
+      <Nav />
+      <Mainroutes />
     </div>
   )
 }
