@@ -1,4 +1,4 @@
-import Mainroutes from "./Routes/mainRoutes";
+import Mainroutes from "./Routes/Mainroutes";
 import Nav from "./Nav/Nav";
 import { useEffect } from "react";
 import { useDispatch } from "react-redux";
@@ -18,7 +18,7 @@ const App = () => {
   }, 5000);
 
   return (
-    <div className="text-white w-screen h-screen px-[5%] bg-gray-800 ">
+    <div className="text-white px-[5%] pb-10 bg-gray-800 ">
       <Nav />
       <Mainroutes />
     </div>
