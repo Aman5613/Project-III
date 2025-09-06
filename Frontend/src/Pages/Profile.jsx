@@ -18,7 +18,7 @@ const Profile = () => {
     }
 
     return (
-        <div>
+        <div className='w-full h-screen text-center'>
             {user ?
                 <div>
                     <h1>Welcome, {user.name}</h1>

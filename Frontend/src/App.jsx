@@ -4,6 +4,7 @@ import { useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { asyncCurrentUser } from "./Store/userAction";
 import { toast } from "react-toastify";
+import Footer from "./Pages/Footer";
 
 
 const App = () => {
@@ -13,14 +14,17 @@ const App = () => {
     dispatch(asyncCurrentUser());
   })
 
-  setTimeout(() => {
-    toast.info("Welcome to the E-commerce App! Explore our products and enjoy your shopping experience.");
-  }, 5000);
+  // setTimeout(() => {
+  //   toast.info("Welcome to the E-commerce App! Explore our products and enjoy your shopping experience.");
+  // }, 5000);
 
   return (
-    <div className="text-white px-[5%] pb-10 bg-gray-800 ">
-      <Nav />
-      <Mainroutes />
+    <div className="relative min-h-screen">
+      <main className="relative z-10 h-screen bg-transparent text-black">
+        <Nav  />
+        <Mainroutes/>
+        <Footer/>
+      </main>
     </div>
   )
 }

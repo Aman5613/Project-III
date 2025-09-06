@@ -1,0 +1,47 @@
+export const footerData = [
+  {
+    h: "help",
+    a: [
+      "Live Chat",
+      "Call Us",
+      "Text Us",
+      "help@allbirds.com",
+      "FAQ/Contact Us",
+      "Returns/Exchanges",
+    ],
+  },
+  {
+    h: "shop",
+    a: [
+      "Men's Shoes",
+      "Women's Shoes",
+      "Men's Apparel",
+      "Women's Apparel",
+      "Socks",
+      "Gift Cards",
+      "Refer a Friend",
+    ],
+  },
+  {
+    h: "company",
+    a: [
+      "Our Stores",
+      "Our Story",
+      "Our Materials",
+      "Sustainability",
+      "Investors",
+      "Shoe Care",
+      "Affiliates",
+      "Bulk Orders",
+      "Careers",
+      "Press",
+      "Allbirds Responsible Disclosure Program",
+      "California Transparency Act",
+      "Community Offers",
+      "Our Blog",
+      "Patents",
+      "Terms of Use - Wholesale",
+      "Allbirds Global Entities",
+    ],
+  },
+];

@@ -1,1 +1,10 @@
 @import "tailwindcss";
+
+@font-face {
+    font-family: founder;
+    src: url('./assets/founders-grotesk-regular.woff2');
+}
+
+body{
+    font-family: founder;
+}
